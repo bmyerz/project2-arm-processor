@@ -1,0 +1,14 @@
+# ARM CPU
+
+Description
+
+## Assembling ARM assembly code into Logisim's plain text hexadecimal format
+
+1. Download and unzip the [ARM Embedded Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)
+2. inside that unzipped folder is a bin directory. Put the path to the bin directory on your PATH. For example, on Linux, if the folder is called gcc-arm-none-eabi-10.3-2021.10 and it is in your home directory.
+
+export PATH=$PATH:$HOME/gcc-arm-none-eabi-10.3-2021.10/bin
+
+3. cd into the project2-arm-processor directory
+
+./arm-assem.sh nameofyoursourcefile.s
