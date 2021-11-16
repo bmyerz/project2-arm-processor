@@ -224,73 +224,84 @@
     <wire from="(120,70)" to="(120,120)"/>
     <wire from="(440,160)" to="(440,210)"/>
     <wire from="(310,250)" to="(440,250)"/>
-    <comp lib="0" loc="(700,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
+    <comp lib="6" loc="(177,85)" name="Text">
+      <a name="text" val="Output"/>
+    </comp>
+    <comp lib="0" loc="(1060,160)" name="Tunnel">
+      <a name="facing" val="north"/>
       <a name="width" val="32"/>
-      <a name="label" val="$s0 Value"/>
-      <a name="labelloc" val="north"/>
+      <a name="label" val="R13"/>
+    </comp>
+    <comp lib="6" loc="(377,102)" name="Text">
+      <a name="text" val="Inputs"/>
+    </comp>
+    <comp lib="0" loc="(700,160)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="32"/>
+      <a name="label" val="R0"/>
     </comp>
     <comp lib="4" loc="(390,380)" name="Register">
       <a name="width" val="32"/>
       <a name="label" val="$PC"/>
     </comp>
-    <comp lib="0" loc="(450,150)" name="Tunnel">
-      <a name="width" val="32"/>
-      <a name="label" val="instruction"/>
-    </comp>
-    <comp lib="0" loc="(790,160)" name="Tunnel">
+    <comp lib="0" loc="(880,160)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="width" val="32"/>
-      <a name="label" val="$s1"/>
+      <a name="label" val="R2"/>
+    </comp>
+    <comp lib="0" loc="(1060,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="SP Value"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="6" loc="(830,28)" name="Text">
+      <a name="text" val="These are DEBUG/TEST outputs from your circuit."/>
+    </comp>
+    <comp lib="0" loc="(970,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="LR Value"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(790,140)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="R1 Value"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(970,160)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="32"/>
+      <a name="label" val="R14"/>
     </comp>
     <comp lib="0" loc="(880,140)" name="Pin">
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
-      <a name="label" val="$s2 Value"/>
+      <a name="label" val="R2 Value"/>
       <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(700,160)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="32"/>
-      <a name="label" val="$s0"/>
     </comp>
     <comp lib="0" loc="(110,130)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="32"/>
       <a name="label" val="fetch_addr"/>
     </comp>
-    <comp lib="0" loc="(790,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
+    <comp lib="0" loc="(450,150)" name="Tunnel">
       <a name="width" val="32"/>
-      <a name="label" val="$s1 Value"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="6" loc="(177,85)" name="Text">
-      <a name="text" val="Output"/>
-    </comp>
-    <comp lib="6" loc="(830,28)" name="Text">
-      <a name="text" val="These are DEBUG/TEST outputs from your circuit."/>
-    </comp>
-    <comp lib="6" loc="(377,102)" name="Text">
-      <a name="text" val="Inputs"/>
-    </comp>
-    <comp lib="0" loc="(450,220)" name="Tunnel">
-      <a name="label" val="clk"/>
+      <a name="label" val="instruction"/>
     </comp>
     <comp lib="0" loc="(420,150)" name="Pin">
       <a name="width" val="32"/>
       <a name="tristate" val="false"/>
       <a name="label" val="INSTRUCTION"/>
     </comp>
-    <comp lib="0" loc="(970,140)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="label" val="$ra Value"/>
-      <a name="labelloc" val="north"/>
+    <comp lib="0" loc="(420,220)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="CLOCK"/>
     </comp>
     <comp lib="0" loc="(140,130)" name="Pin">
       <a name="facing" val="west"/>
@@ -299,31 +310,20 @@
       <a name="label" val="FETCH_ADDRESS"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(970,160)" name="Tunnel">
+    <comp lib="0" loc="(790,160)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="width" val="32"/>
-      <a name="label" val="$ra"/>
+      <a name="label" val="R1"/>
     </comp>
-    <comp lib="0" loc="(880,160)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="32"/>
-      <a name="label" val="$s2"/>
+    <comp lib="0" loc="(450,220)" name="Tunnel">
+      <a name="label" val="clk"/>
     </comp>
-    <comp lib="0" loc="(1060,160)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="32"/>
-      <a name="label" val="$sp"/>
-    </comp>
-    <comp lib="0" loc="(1060,140)" name="Pin">
+    <comp lib="0" loc="(700,140)" name="Pin">
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
-      <a name="label" val="$sp Value"/>
+      <a name="label" val="R0 Value"/>
       <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(420,220)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="CLOCK"/>
     </comp>
   </circuit>
 </project>
