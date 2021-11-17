@@ -336,7 +336,7 @@
       <a name="addrWidth" val="24"/>
       <a name="dataWidth" val="32"/>
       <a name="contents">addr/data: 24 32
-e3a00001 e3a01002 e1500001 00802001 10800001 
+e3a0000b e3a01016 e1500001 e3a00016 00802001 10800001 
 </a>
     </comp>
     <comp lib="3" loc="(350,440)" name="Comparator">
