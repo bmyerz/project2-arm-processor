@@ -41,13 +41,13 @@ def get_test_format(typ):
     if typ == 'alu':
         return OutputFormat('alu', ["Test #", "OF", "Eq", "Result"], [8,1,1,32])  
     elif typ == 'regfile':
-        return OutputFormat('regfile', ["Test #", "$s0 Value", "$s1 Value", "$s2 Value", "$ra Value", "$sp Value", "Read Data 1", "Read Data 2"], [8, 32, 32, 32, 32, 32, 32, 32])
+        return OutputFormat('regfile', ["Test #", "R0 Value", "R1 Value", "R2 Value", "LR (R14) Value", "SP (R13) Value", "Read Data 1", "Read Data 2"], [8, 32, 32, 32, 32, 32, 32, 32])
     elif typ == 'cpu':
-       return OutputFormat('cpu',  ['$s0 Value', '$s1 Value', '$s2 Value', '$ra Value', '$sp Value', 'Time Step', 'Fetch Addr', 'Instruction'], [32,32,32,32,32,8,32,32])
+       return OutputFormat('cpu',  ['R0 Value', 'R1 Value', 'R2 Value', 'LR (R14) Value', 'SP (R13) Value', 'Time Step', 'Fetch Addr', 'Instruction'], [32,32,32,32,32,8,32,32])
     elif typ == 'cpu-lite':
-        return OutputFormat('cpu-lite',  ['$s0 Value', '$s1 Value', '$s2 Value', '$ra Value', '$sp Value', 'Time Step'], [32,32,32,32,32,8])
+        return OutputFormat('cpu-lite',  ['R0 Value', 'R1 Value', 'R2 Value', 'LR (R14) Value', 'SP (R13) Value', 'Time Step'], [32,32,32,32,32,8])
     elif typ == 'cpu-end':
-        return OutputFormat('cpu-end',  ['$s0 Value', '$s1 Value', '$s2 Value', '$sp Value'], [32,32,32,32])
+        return OutputFormat('cpu-end',  ['R0 Value', 'R1 Value', 'R2 Value', 'SP (R13) Value'], [32,32,32,32])
     elif typ == 'alu-control':
         return OutputFormat('alu-control', ['Test #', 'Switch'], [8,4])
     else:
