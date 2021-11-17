@@ -1,5 +1,6 @@
 *~
 tests/alu.circ
+tests/alu-control.circ
 tests/regfile.circ
 tests/cpu.circ
 tests/mem.circ
