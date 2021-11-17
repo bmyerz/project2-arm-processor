@@ -241,8 +241,8 @@ p2sc_tests = [
         TestCase(os.path.join(file_locations,'branch-forward.circ'),
                 [[0, 0, 0, 0x0, 0x0, 0, 0x0,   0xea000001],
                  [0, 0, 0, 0x0, 0x0, 1, 0xC,   0xe3a0201e],
-                 [0, 30, 0, 0x0, 0x0, 2, 0x10, 0xe3a00028],
-                 [40, 30, 0, 0x0, 0x0, 3, 0x14,0x00000000]]), "cpu")
+                 [0, 0, 30, 0x0, 0x0, 2, 0x10, 0xe3a00028],
+                 [40, 0, 30, 0x0, 0x0, 3, 0x14,0x00000000]]), "cpu")
 ]
 
 if __name__ == '__main__':
