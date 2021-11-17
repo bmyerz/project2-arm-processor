@@ -1,3 +1,3 @@
-addi $s0, $zero, 1
-addi $s1, $zero, 2
-add $s2, $s0, $s1
+mov R0, #1
+mov R1, #2
+add R2, R0, R1

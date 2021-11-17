@@ -280,7 +280,7 @@
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
-      <a name="label" val="$sp Value"/>
+      <a name="label" val="SP (R13) Value"/>
       <a name="labelloc" val="north"/>
     </comp>
     <comp lib="4" loc="(780,250)" name="ROM">

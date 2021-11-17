@@ -249,7 +249,7 @@
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
-      <a name="label" val="$sp Value"/>
+      <a name="label" val="SP (R13) Value"/>
       <a name="labelloc" val="north"/>
     </comp>
     <comp lib="4" loc="(280,350)" name="Counter">
@@ -315,7 +315,7 @@
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
-      <a name="label" val="$ra Value"/>
+      <a name="label" val="LR (R14) Value"/>
       <a name="labelloc" val="north"/>
     </comp>
     <comp lib="0" loc="(70,100)" name="Pin">
