@@ -213,13 +213,36 @@ p1_tests = [
 
 # Single-cycle (sc) tests
 p2sc_tests = [
-  ("starter test",
-        TestCase(os.path.join(file_locations,'starter_test.circ'),
-                [[0, 0, 0, 0x0, 0x0, 0, 0x0, 0x20100001],
-                 [1, 0, 0, 0x0, 0x0, 1, 0x4, 0x20110002],
-                 [1, 2, 0, 0x0, 0x0, 2, 0x8, 0x02119020],
-                 [1, 2, 3, 0x0, 0x0, 3, 0xC, 0x00000000],
-                 [1, 2, 3, 0x0, 0x0, 4, 0x10, 0x00000000]]), "cpu"),
+  ("MOV imm test",
+        TestCase(os.path.join(file_locations,'mov-i.circ'),
+                [[0, 0, 0, 0x0, 0x0, 0, 0x0,  0xe3a0000f],
+                 [15, 0, 0, 0x0, 0x0, 1, 0x4,  0x00000000]]), "cpu"),
+  ("MOV ADD register test",
+        TestCase(os.path.join(file_locations,'mov-add-reg.circ'),
+                [[0, 0, 0, 0x0, 0x0, 0, 0x0,  0xe3a00001],
+                 [1, 0, 0, 0x0, 0x0, 1, 0x4,  0xe3a01002],
+                 [1, 2, 0, 0x0, 0x0, 2, 0x8,  0xe0802001],
+                 [1, 2, 3, 0x0, 0x0, 3, 0xC,  0x00000000]]), "cpu"),
+  ("MOV ADD imm test",
+        TestCase(os.path.join(file_locations,'mov-add-i.circ'),
+                [[0, 0, 0, 0x0, 0x0, 0, 0x0,  0xe3a01003],
+                 [0, 3, 0, 0x0, 0x0, 1, 0x4,  0xe2812009],
+                 [0, 3, 12, 0x0, 0x0, 2, 0x8, 0x00000000]]), "cpu"),
+  ("CMP for conditional adds",
+        TestCase(os.path.join(file_locations,'cond-add.circ'),
+                [[0, 0, 0, 0x0, 0x0, 0],
+                 [11, 0, 0, 0x0, 0x0, 1],
+                 [11, 22, 0, 0x0, 0x0, 2],
+                 [11, 22, 0, 0x0, 0x0, 3],
+                 [22, 22, 0, 0x0, 0x0, 4],
+                 [22, 22, 0, 0x0, 0x0, 5],
+                 [44, 22, 0, 0x0, 0x0, 6]]), "cpu-lite"),
+  ("CMP for conditional adds",
+        TestCase(os.path.join(file_locations,'cond-add.circ'),
+                [[0, 0, 0, 0x0, 0x0, 0, 0x0,   0xea000001],
+                 [0, 0, 0, 0x0, 0x0, 1, 0xC,   0xe3a0201e],
+                 [0, 30, 0, 0x0, 0x0, 2, 0x10, 0xe3a00028],
+                 [40, 30, 0, 0x0, 0x0, 3, 0x14,0x00000000]]), "cpu")
 ]
 
 if __name__ == '__main__':
