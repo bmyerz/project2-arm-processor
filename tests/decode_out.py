@@ -49,7 +49,7 @@ def get_test_format(typ):
     elif typ == 'cpu-end':
         return OutputFormat('cpu-end',  ['R0 Value', 'R1 Value', 'R2 Value', 'SP (R13) Value'], [32,32,32,32])
     elif typ == 'alu-control':
-        return OutputFormat('alu-control', ['Test #', 'Switch'], [8,4])
+        return OutputFormat('alu-control', ['Test #', 'ALUControl'], [8,4])
     else:
        return None
 
