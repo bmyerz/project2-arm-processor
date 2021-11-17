@@ -10,9 +10,11 @@ arm-none-eabi-gcc -c -o $objectfile $asmfile
 # logisim requires this to go at top of hex file
 echo "v2.0 raw" > header.tmp
 
-# disassemble the binary, skip the first 8 lines (tail),
+# disassemble the binary, skip the first 7 lines (tail),
+# take only lines with machine code (skipping the label lines)
 # and take only the machine code in hexadecimal plain text (cut)
-arm-none-eabi-objdump -S $objectfile | tail -n +8 | cut -f2 >hex.tmp
+# and then remove blank lines
+arm-none-eabi-objdump -S $objectfile | tail -n +7 | grep ':.' | cut -f2 >hex.tmp
 
 # concatenate the header and the plain text machine code into one file
 cat header.tmp hex.tmp >$hexfile
