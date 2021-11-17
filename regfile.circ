@@ -64,7 +64,7 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="jar#/Users/bdmyers/OneDrive - University of Iowa/uiowa/2630/cs2630_materials/project2/fa21/hw5/cs2630-proj2-2-solutions/cs3410.jar#edu.cornell.cs3410.Components" name="7">
+  <lib desc="jar#cs3410.jar#edu.cornell.cs3410.Components" name="7">
     <tool name="MIPSProgramROM">
       <a name="contents" val=""/>
     </tool>
