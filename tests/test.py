@@ -135,6 +135,9 @@ class ReferenceFileParser(OutputProvider):
                 values = self.parse_line(line)
                 yield values 
 
+# If you need negative numbers in the expected output, it is best to explicitly put them in two's
+# complement instead of using negation (-). Because of python's Big Ints
+# comparisons don't work like you might expect (e.g., -1 == 0xFFFFFFFF)
 p1_tests = [
   ("ALU add (with overflow) test",
         TestCase(os.path.join(file_locations,'alu-add.circ'),
